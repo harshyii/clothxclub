@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f4ef">
+  <meta name="description" content="Join The Club Membership at CLOTH X CLUB in Pehowa. Ask about member-only offers and special discounts.">
+  <title>The Club Membership — CLOTH X CLUB</title>
+  <style>
+    :root{--ink:#171717;--muted:#6f6b66;--paper:#f7f4ef;--white:#fff;--accent:#c9f31d;--line:#e5e0d8;--radius:18px;--max:1100px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,Arial,Helvetica,sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration:none}
+    button,input{font:inherit}
+    .announcement{background:var(--ink);color:#fff;text-align:center;padding:9px 16px;font-size:.78rem;letter-spacing:.08em}
+    .wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(247,244,239,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-weight:950;font-size:1.3rem;letter-spacing:-.07em;line-height:1;white-space:nowrap}
+    .brand span{display:block;font-size:.58rem;letter-spacing:.18em;font-weight:700;margin-top:7px}
+    .nav-links{display:flex;align-items:center;gap:24px;font-size:.88rem;font-weight:650}
+    .pill{border:1px solid var(--ink);border-radius:999px;padding:11px 17px;background:transparent;font-size:.88rem;font-weight:750;display:inline-flex;align-items:center;justify-content:center;gap:8px;cursor:pointer}
+    .pill.dark{background:var(--ink);color:#fff}
+    .pill.lime{background:var(--accent);border-color:var(--accent)}
+    .hero{padding:36px 0 28px}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:20px}
+    .hero-copy{background:var(--accent);border-radius:26px;padding:clamp(28px,5vw,62px);display:flex;flex-direction:column;align-items:flex-start;justify-content:center;min-height:420px}
+    .eyebrow{font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;font-weight:850}
+    h1{font-size:clamp(3rem,7vw,5.7rem);line-height:.9;letter-spacing:-.085em;margin:20px 0}
+    h1 em{font-style:normal;display:block}
+    .hero-copy p{max-width:440px;margin:0 0 25px;color:#333}
+    .hero-art{border-radius:26px;background:#20201e;color:#fff;padding:clamp(28px,4vw,48px);display:flex;flex-direction:column;justify-content:space-between;min-height:420px;overflow:hidden;position:relative}
+    .hero-art:after{content:"X";position:absolute;right:-14px;bottom:-105px;font-size:23rem;font-weight:950;line-height:1;color:rgba(201,243,29,.12);pointer-events:none}
+    .membership-mark{width:68px;height:68px;display:grid;place-items:center;border-radius:50%;background:var(--accent);color:var(--ink);font-size:2rem;font-weight:950}
+    .hero-art h2{font-size:clamp(2.2rem,4vw,3.5rem);letter-spacing:-.07em;line-height:.98;margin:24px 0 12px;position:relative;z-index:1}
+    .hero-art p{color:#d4d1ca;max-width:330px;position:relative;z-index:1}
+    .section{padding:30px 0 45px}
+    .section-title{font-size:clamp(2rem,4vw,3rem);line-height:1;letter-spacing:-.065em;margin:8px 0 14px}
+    .intro{max-width:700px;color:var(--muted);margin:0 0 24px}
+    .benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .benefit{background:#fff;border:1px solid var(--line);border-radius:17px;padding:23px}
+    .benefit .icon{font-size:1.7rem}
+    .benefit h3{font-size:1.05rem;margin:12px 0 6px}
+    .benefit p{font-size:.92rem;color:var(--muted);margin:0}
+    .join-panel{display:grid;grid-template-columns:.9fr 1.1fr;gap:30px;background:#eae5dc;border-radius:24px;padding:clamp(24px,5vw,48px);align-items:start}
+    .join-panel h2{font-size:clamp(2rem,4vw,3.3rem);line-height:.98;letter-spacing:-.07em;margin:12px 0}
+    .join-panel p{color:#5f5b55}
+    .form-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px}
+    label{display:block;font-size:.85rem;font-weight:750;margin:0 0 7px}
+    input{width:100%;border:1px solid #d6d0c7;border-radius:10px;padding:13px 14px;background:#fff;color:var(--ink);margin-bottom:16px;min-height:47px}
+    input:focus{outline:2px solid var(--accent);outline-offset:1px}
+    .form-card .pill{width:100%}
+    .fineprint{font-size:.78rem;color:var(--muted);margin:12px 0 0}
+    .store-note{margin-top:18px;padding:16px 18px;border:1px dashed #b6aea2;border-radius:14px}
+    .store-note p{margin:4px 0 0;font-size:.9rem}
+    footer{margin-top:30px;background:var(--ink);color:#fff;padding:35px 0 22px}
+    .footer-row{display:flex;justify-content:space-between;gap:25px;align-items:flex-start}
+    .footer-brand{font-size:1.7rem;font-weight:950;letter-spacing:-.08em}
+    .footer-brand small{display:block;font-size:.62rem;letter-spacing:.16em;margin-top:7px}
+    .footer-note{max-width:320px;color:#c4c1bb;font-size:.88rem}
+    .footer-links{display:flex;gap:18px;flex-wrap:wrap;color:#ddd;font-size:.85rem}
+    .copyright{border-top:1px solid #42413e;margin-top:26px;padding-top:17px;color:#a9a69f;font-size:.75rem}
+    @media(max-width:760px){.nav-links{gap:13px}.hero-grid,.join-panel{grid-template-columns:1fr}.hero-copy,.hero-art{min-height:350px}.benefits{grid-template-columns:1fr}.benefit{padding:20px}}
+    @media(max-width:520px){.wrap{width:calc(100% - 28px)}.announcement{font-size:.65rem}.nav{min-height:70px}.brand{font-size:1.15rem}.brand span{font-size:.49rem}.nav-links{gap:12px;font-size:.78rem}.nav-links a:nth-child(2){display:none}.hero{padding-top:18px}.hero-copy{padding:27px;min-height:360px}.hero-art{min-height:310px}.form-card{padding:18px}.footer-row{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <div class="announcement">MEMBER-ONLY OFFERS • EVERYDAY STYLE • WELCOME TO THE CLUB</div>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="index.html" aria-label="CLOTH X CLUB home">CLOTH X CLUB<span>FASHION • LIFESTYLE • EVERYDAY WEAR</span></a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html#collections">Collections</a>
+        <a href="index.html#about">Our Story</a>
+        <a href="index.html#visit">Visit Us</a>
+      </nav>
+      <a class="pill dark" href="#join">Join the Club ↘</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero wrap">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Your style. Your club.</div>
+          <h1>Join the <em>Club.</em></h1>
+          <p>Become a CLOTH X CLUB member and stay connected with member-only offers, special discounts and fresh finds at our Pehowa store.</p>
+          <a class="pill dark" href="#join">Become a Member <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="hero-art">
+          <div class="membership-mark">X</div>
+          <div>
+            <div class="eyebrow" style="color:var(--accent)">The Club Membership</div>
+            <h2>Good style.<br>Extra reasons<br>to come back.</h2>
+            <p>Free to join. Easy to ask about. Made for your everyday style.</p>
+          </div>
+          <div class="eyebrow">CLOTH X CLUB · PEHOWA</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap">
+      <div class="eyebrow">Your membership</div>
+      <h2 class="section-title">A little more for our regulars.</h2>
+      <p class="intro">The Club Membership is a simple way to hear about special offers at CLOTH X CLUB. Ask us about current member offers and how to redeem them in store.</p>
+      <div class="benefits">
+        <article class="benefit"><div class="icon" aria-hidden="true">✦</div><h3>Member-only offers</h3><p>Get updates about selected offers available to Club Members.</p></article>
+        <article class="benefit"><div class="icon" aria-hidden="true">％</div><h3>Special discounts</h3><p>Ask in store or on WhatsApp about current member discounts and offer conditions.</p></article>
+        <article class="benefit"><div class="icon" aria-hidden="true">♡</div><h3>Stay in the loop</h3><p>Choose to contact us for membership information and updates about offers.</p></article>
+      </div>
+    </section>
+
+    <section class="section wrap" id="join">
+      <div class="join-panel">
+        <div>
+          <div class="eyebrow">Your next step</div>
+          <h2>Make it official.</h2>
+          <p>Fill in your details to prepare a membership request in WhatsApp. Review the message and send it to our shop. You can also join by asking our team in store.</p>
+          <div class="store-note">
+            <strong>Prefer to join in person?</strong>
+            <p>Visit CLOTH X CLUB near Sheetla Mata Mandir, Pehowa, Haryana, and ask our team about The Club Membership.</p>
+            <p><a href="https://www.google.com/maps/search/?api=1&query=CLOTH+X+CLUB+Pehowa" target="_blank" rel="noopener"><strong>Get directions ↗</strong></a></p>
+          </div>
+        </div>
+        <div class="form-card">
+          <form id="joinForm">
+            <label for="fullName">Your name</label>
+            <input id="fullName" name="fullName" autocomplete="name" required maxlength="80" placeholder="Enter your name">
+            <label for="phone">Your WhatsApp number</label>
+            <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required maxlength="20" placeholder="Enter your mobile number">
+            <button class="pill dark" type="submit">Continue on WhatsApp ↗</button>
+            <p class="fineprint">This page does not store or submit your details to a database. Your details are placed in a WhatsApp message for you to review and send. By sending it, you are asking CLOTH X CLUB to contact you about membership.</p>
+          </form>
+          <p id="formMessage" class="fineprint" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-row">
+        <div><div class="footer-brand">CLOTH X CLUB<small>FASHION • LIFESTYLE • EVERYDAY WEAR</small></div><p class="footer-note">Dress like you mean it. Your Style. Your Club.</p></div>
+        <div class="footer-links"><a href="index.html">Home</a><a href="index.html#collections">Collections</a><a href="index.html#visit">Visit Us</a></div>
+      </div>
+      <div class="copyright">© <span id="year"></span> CLOTH X CLUB. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    // IMPORTANT: Replace this with your shop's WhatsApp number, including country code 91.
+    // Example format: 919876543210 (digits only, no +, spaces, or hyphens).
+    const SHOP_WHATSAPP_NUMBER = "919992503210";
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    document.getElementById("joinForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("fullName").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const message = document.getElementById("formMessage");
+
+      if (!name || !phone) {
+        message.textContent = "Please enter your name and WhatsApp number.";
+        return;
+      }
+
+      if (!/^91\d{10}$/.test(SHOP_WHATSAPP_NUMBER)) {
+        message.textContent = "Membership registration is not connected yet. Please contact the shop or join in store. The shop owner needs to add the correct WhatsApp number in this page's code.";
+        return;
+      }
+
+      const text = [
+        "Hello CLOTH X CLUB!",
+        "I'd like to join The Club Membership.",
+        "",
+        "Name: " + name,
+        "My WhatsApp number: " + phone,
+        "",
+        "Please share the membership details and current member offers."
+      ].join("\n");
+
+      const url = "https://wa.me/" + SHOP_WHATSAPP_NUMBER + "?text=" + encodeURIComponent(text);
+      window.location.href = url;
+    });
+  </script>
+</body>
+</html>
