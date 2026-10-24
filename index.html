@@ -6,6 +6,7 @@
   <meta name="theme-color" content="#f7f4ef">
   <meta name="google-site-verification" content="4-mFZFGsse9586Ev__EWVXhQz5KTz0NA8MNe27W5V6A" />
   <meta name="description" content="Discover everyday style at CLOTH X CLUB. Explore clothing for every mood, moment and member of the family. Visit us in Pehowa, Haryana.">
+  
   <title>CLOTH X CLUB — Your Style. Your Club.</title>
   <style>
     :root{--ink:#171717;--muted:#6f6b66;--paper:#f7f4ef;--white:#fff;--accent:#c9f31d;--line:#e5e0d8;--radius:18px;--max:1180px}
@@ -205,6 +206,28 @@
       toastTimer = setTimeout(() => toast.classList.remove('show'), 2200);
     }));
   </script>
+
+  <script src="https://apis.google.com/js/platform.js?onload=renderOptIn" async defer></script>
+
+<script>
+  window.renderOptIn = function() {
+    window.gapi.load('surveyoptin', function() {
+      window.gapi.surveyoptin.render(
+        {
+          // REQUIRED FIELDS
+          "merchant_id": 5872800477,
+          "order_id": "ORDER_ID",
+          "email": "CUSTOMER_EMAIL",
+          "delivery_country": "COUNTRY_CODE",
+          "estimated_delivery_date": "YYYY-MM-DD",
+
+          // OPTIONAL FIELDS
+          "products": [{"gtin":"GTIN1"}, {"gtin":"GTIN2"}]
+        });
+    });
+  }
+</script>
+  
 </body>
 </html>
 
